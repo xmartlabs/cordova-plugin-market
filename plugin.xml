@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="com.xmartlabs.cordova.market" version="1.0">
+    <name>Market</name>
+    <description>Cordova Plugin for access to Google Play and Apple Store within your app</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,market,store,itunes,play</keywords>
+    <js-module src="www/market.js" name="Market">
+        <clobbers target="cordova.plugins.market" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Market">
+                <param name="android-package" value="com.xmartlabs.cordova.market.Market"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/Market.java" target-dir="src/com/xmartlabs/cordova/market" />
+    </platform>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Market">
+                <param name="ios-package" value="CDVMarket"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVMarket.h" />
+        <source-file src="src/ios/CDVMarket.m" />
+    </platform>
+</plugin>
