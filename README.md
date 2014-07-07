@@ -14,11 +14,20 @@ This plugin follows the Cordova 3.0 plugin spec, so it can be installed through 
 
 When you want to open the device's store do this:
 
-    cordova.market.open('your.app.bundle.id')
+* For Android use the app's package:
 
-You could also add a success and failure callback like this:
+    `cordova.plugins.market.open('your.app.package')`
 
-    cordova.market.open('your.app.bundle.id', {
+* For iOS, first you need to create an easy-to-read link to your app using App Store Short Links, then use the app name
+
+    `cordova.plugins.market.open('yourappname')`
+
+This will open the link `itms-apps://itunes.com/apps/yourappname`
+
+You can also add a success and failure callback like this:
+    
+    var appId = "...";
+    cordova.plugins.market.open(appId, {
       success: function() {
         // Your stuff here
       },
