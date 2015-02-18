@@ -4,7 +4,7 @@ cordova-plugin-market
 Cordova (PhoneGap) 3.0+ plugin to open an application on Google Play or iTunes.
 This plugin is compatible only with Android and iOS.
 
-#Instalation
+#Installation
 
 This plugin follows the Cordova 3.0 plugin spec, so it can be installed through the Cordova CLI in your existing Cordova project:
 
@@ -22,7 +22,7 @@ When you want to open the device's store do this:
 
     `cordova.plugins.market.open('yourappname')`
 
-This will open the link `itms-apps://itunes.com/apps/yourappname`
+This will open the link `itms-apps://itunes.com/app/yourappname`
 
 You can also add a success and failure callback like this:
     
