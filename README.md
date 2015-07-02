@@ -22,7 +22,7 @@ When you want to open the device's store do this:
 
     `cordova.plugins.market.open('yourappname')`
 
-This will open the link `itms-apps://itunes.com/app/yourappname`
+This will open the link `itms-apps://itunes.apple.com/app/yourappname`
 
 You can also add a success and failure callback like this:
     
