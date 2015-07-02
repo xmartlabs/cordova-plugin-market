@@ -20,7 +20,7 @@
         
         CDVPluginResult *pluginResult;
         if (appId) {
-            NSString *url = [NSString stringWithFormat:@"itms-apps://itunes.com/app/%@", appId];
+            NSString *url = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/%@", appId];
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
             
             pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
