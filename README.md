@@ -1,8 +1,8 @@
 cordova-plugin-market
 =====================
 
-Cordova (PhoneGap) 3.0+ plugin to open an application on Google Play or iTunes.
-This plugin is compatible only with Android and iOS.
+Cordova (PhoneGap) 3.0+ plugin to open an application on native Marketplace app, aka Google Play for Android or App Store for iOS.
+Currently this plugin is compatible only with Android and iOS. Feel free to add support for the platform you need!
 
 #Installation
 
@@ -22,7 +22,7 @@ When you want to open the device's store do this:
 
     `cordova.plugins.market.open('yourappname')`
 
-This will open the link `itms-apps://itunes.apple.com/app/yourappname`
+This will open the link `itms-apps://itunes.apple.com/app/yourappname`. Alternatively you can use your app's id that should be similar to `id284815942`
 
 You can also add a success and failure callback like this:
     
@@ -38,6 +38,10 @@ You can also add a success and failure callback like this:
 
 #Release Notes
 
+Version 1.1
+
+* Fixed issue due to use old iOS url.
+
 Version 1.0
 
 * Initial release: support for open Google Play or iTunes with an Application ID
@@ -46,7 +50,7 @@ Version 1.0
 
 If you are using cordova-plugin-market in your app and have any suggestion or question:
 
-Gonzalo Melo, <gonzalo@xmartlabs.com>
+Enrique Galindo, <enrique@xmartlabs.com>
 
 Miguel Revetria, <miguel@xmartlabs.com>
 
