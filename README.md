@@ -25,7 +25,7 @@ When you want to open the device's store do this:
 This will open the link `itms-apps://itunes.apple.com/app/yourappname`. Alternatively you can use your app's id that should be similar to `id284815942`
 
 You can also add a success and failure callback like this:
-    
+
     var appId = "...";
     cordova.plugins.market.open(appId, {
       success: function() {
@@ -35,6 +35,27 @@ You can also add a success and failure callback like this:
         // Your stuff here
       }
     })
+
+  When you want to search for apps with keyword:
+
+  * For Android use the app's package:
+
+      `cordova.plugins.market.search('keyword')`
+
+  * For iOS, no support yet
+
+  You can also add a success and failure callback like this:
+
+      var keyword = "gmail";
+      cordova.plugins.market.search(keyword, {
+        success: function() {
+          // Your stuff here
+        },
+        failure: function() {
+          // Your stuff here
+        }
+      })
+
 
 #Release Notes
 
