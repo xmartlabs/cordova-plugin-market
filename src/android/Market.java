@@ -41,7 +41,15 @@ public class Market extends CordovaPlugin
                 if (args.length() == 1) {
                     String appId = args.getString(0);
                     this.openGooglePlay(appId);
-                
+
+                    callbackContext.success();
+                    return true;
+                }
+            }else if (action.equals("search")) {
+                if (args.length() == 1) {
+                    String key = args.getString(0);
+                    this.searchGooglePlay(key);
+
                     callbackContext.success();
                     return true;
                 }
@@ -67,6 +75,20 @@ public class Market extends CordovaPlugin
     private void openGooglePlay(String appId) throws android.content.ActivityNotFoundException {
         Context context = this.cordova.getActivity().getApplicationContext();
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appId));
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
+    }
+
+    /**
+     * search the details on Google Play .
+     *
+     * @param searchKeyword
+     *            Application Id on Google Play.
+     *            E.g.: earth
+     */
+    private void searchGooglePlay(String key) throws android.content.ActivityNotFoundException {
+        Context context = this.cordova.getActivity().getApplicationContext();
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://search?q=" + key));
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
