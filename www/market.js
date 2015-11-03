@@ -14,7 +14,7 @@ Market.prototype.open = function(appId, callbackContext) {
 
 Market.prototype.search = function(key, callbackContext) {
     callbackContext = callbackContext || { };
-    exec(callbackContext.success || null, callbackContext.error || null, 'Market', 'search', [appId]);
+    exec(callbackContext.success || null, callbackContext.error || null, 'Market', 'search', [key]);
 };
 
 var market = new Market();
