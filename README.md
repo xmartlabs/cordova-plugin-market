@@ -8,7 +8,7 @@ Currently this plugin is compatible only with Android and iOS. Feel free to add 
 
 This plugin follows the Cordova 3.0 plugin spec, so it can be installed through the Cordova CLI in your existing Cordova project:
 
-    cordova plugin add https://github.com/sesubash/cordova-plugin-market
+    cordova plugin add https://github.com/xmartlabs/cordova-plugin-market
 
 #How to use it
 
