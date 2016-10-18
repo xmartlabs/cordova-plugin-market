@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="com.xmartlabs.cordova.market" version="1.1">
+        id="com.xmartlabs.cordova.market" version="1.2">
     <name>Market</name>
     <description>Cordova Plugin for access to Google Play and Apple Store within your app</description>
     <license>Apache 2.0</license>
