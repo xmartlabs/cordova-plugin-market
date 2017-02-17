@@ -31,7 +31,7 @@ You can also add a success and failure callback like this:
       success: function() {
         // Your stuff here
       },
-      failure: function() {
+      error: function() {
         // Your stuff here
       }
     })
@@ -51,7 +51,7 @@ You can also add a success and failure callback like this:
         success: function() {
           // Your stuff here
         },
-        failure: function() {
+        error: function() {
           // Your stuff here
         }
       })
