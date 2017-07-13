@@ -3,7 +3,7 @@
   "version": "1.2.0",
   "description": "Cordova Plugin for access to Google Play and Apple Store within your app",
   "cordova": {
-    "id": "com.xmartlabs.cordova.market",
+    "id": "cordova-plugin-market",
     "platforms": [
       "android",
       "ios"
